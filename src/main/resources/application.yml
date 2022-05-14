@@ -1,8 +1,33 @@
 spring:
+  application:
+    name: betterreads
   security:
     oauth2:
       client:
         registration:
           github:
-            client-id: Iv1.3a6986df0044cb39
-            client-secret: c6e49ac7d5355ab51baee3eef83faed4651a4780
+            client-id: 
+            client-secret: 
+  main:
+    allow-circular-references: true
+  data:
+    cassandra:
+      keyspace-name: main
+      username: 
+      password: 
+      schema-action: create-if-not-exists
+      request:
+        timeout: 10s
+      connection:
+        connect-timeout: 10s
+        init-query-timeout: 10s
+
+datastax.astra:
+    secure-connect-bundle: secure-connect.zip
+
+astra.db:
+    id: 084981a8-a69a-482f-811e-2c7094e904d3-1
+    region: us-east1
+    keyspace: main
+    application.token: AstraCS:dLMXMhFSfJHAKlzdiXbfSuJs:affc400357f49fb06eac051ce50f5ec0a886af32abed207e8da015915a7f2be6
+
